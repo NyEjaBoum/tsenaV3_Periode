@@ -1,0 +1,30 @@
+PS C:\Users\Ny Eja\Documents\fianarana ITU\S4\PROG\python\tsenaV5_LoyerTempo> py main.py
+Chemin de la base : C:\Users\Ny Eja\Documents\fianarana ITU\S4\PROG\python\tsenaV5_LoyerTempo\Database1.accdb (Type: <class 'str'>)
+Connexion réussie à la base de données Access.
+Dette la plus ancienne : idBox=4, mois=3, année=2025, montant_dette=120000
+Reste à payer pour idBox=4, mois=3, année=2025 : 120000
+Montant restant à distribuer : 130000
+Paiement actuel : 120000
+Opération réussie.
+Paiement de 120000 inséré pour idBox=4, mois=3, année=2025
+Montant restant après paiement : 10000
+Nouveau reste après paiement : 0
+Opération réussie.
+Dette pour idBox=4, mois=3, année=2025 mise à 0.
+Passage au mois suivant : 4/2025
+Dette la plus ancienne : idBox=5, mois=3, année=2025, montant_dette=20000
+Le box le plus ancien à payer est 5, pas 4. Redirection.
+Dette la plus ancienne : idBox=5, mois=3, année=2025, montant_dette=20000
+Reste à payer pour idBox=5, mois=3, année=2025 : 20000
+Montant restant à distribuer : 130000
+Paiement actuel : 20000
+Opération réussie.
+Paiement de 20000 inséré pour idBox=5, mois=3, année=2025
+Montant restant après paiement : 110000
+Nouveau reste après paiement : 0
+Opération réussie.
+Dette pour idBox=5, mois=3, année=2025 mise à 0.
+Passage au mois suivant : 4/2025
+Erreur : cannot access local variable 'idBox' where it is not associated with a value
+PS C:\Users\Ny Eja\Documents\fianarana ITU\S4\PROG\python\tsenaV5_LoyerTempo> 
+regarde il y a erreur

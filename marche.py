@@ -98,10 +98,19 @@ class Marche:
         return None  
 
     @staticmethod
-    def getLoyerMarche(connexion,idMarche):
-        query = f"SELECT MONTANT FROM LOYER WHERE IDMARCHE = {idMarche}"
-        rows = connexion.execute_query(query)
-        for row in rows:
-            loyer = row[0]
-        return loyer
+    def getLoyerMarche(connexion,idMarche,mois,annee):
+        mois_total = annee * 12 + mois
+        query = f"""SELECT MONTANT FROM LOYER WHERE IDMARCHE = {idMarche}
+                AND ((YEAR(DATELOYER) *12 + Month(DATELOYER)) <= {mois_total})
+                ORDER BY (YEAR(DATELOYER) * 12 + Month(DATELOYER)) DESC
+                """
+        try:
+            rows = connexion.execute_query(query)
+            for row in rows:
+                loyer = row[0]
+                return loyer  #tonga d retournena lay valiny voalohany
+            return None  
+        except Exception as e:
+            print(f"Erreur lors de la récupération du loyer : {e}")
+            return None
 
